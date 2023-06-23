@@ -1,0 +1,23 @@
+@use '../abstracts/index' as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $color-primary;
+    min-height: 100vh;
+    font-family: $font-primary;
+    color: $color-secondary
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

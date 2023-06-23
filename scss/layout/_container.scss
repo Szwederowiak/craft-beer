@@ -1,0 +1,14 @@
+@use '../abstracts/index' as *;
+
+.container {
+    width: 360px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @include respond-to('md') {
+        width: 720px
+    }
+    @include respond-to('lg') {
+        width: 1180px
+    }
+}

@@ -1,0 +1,116 @@
+@use '../../abstracts/index' as *;
+
+.featured {
+    margin: 100px 0;
+    padding: 100px 0;
+
+    &__container {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "logo logo"
+            "image image"
+            "description description"
+            "certificate region";
+        grid-gap: 1px;
+        background: $color-secondary;
+
+        @include respond-to('md') {
+            grid-template-areas:
+                "logo logo"
+                "image description"
+                "image description"
+                "certificate region"
+            ;
+        }
+
+        @include respond-to('lg') {
+            height: 700px;
+            grid-template-columns: 50% 25% 25%;
+            grid-template-rows: 180px 180px 1fr;
+            grid-template-areas:
+                "image logo region"
+                "image certificate region"
+                "image description description"
+            ;
+        }
+    }
+
+    &__section {
+        background: $color-primary;
+        box-shadow: 0 1px 0 0 $color-secondary, 0 -1px 0 0 $color-secondary;
+        display: grid;
+        place-items: center;
+        padding: 20px 0;
+        height: 100%;
+        width: 100%;
+
+        @include respond-to('md') {
+            padding: 20px;
+        }
+
+        &--logo {
+            grid-area: logo;
+            padding: 0;
+
+            img {
+                max-width: 200px;
+                @include respond-to('lg') {
+                    max-height: 130px;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        &--image {
+            grid-area: image;
+
+            img {
+                @include respond-to('lg') {
+                    height: 640px;
+                }
+            }
+        }
+
+        &--description {
+            grid-area: description;
+            display: block;
+
+            @include respond-to('lg') {
+                padding: 30px 10px 30px 30px;
+            }
+        }
+
+        &--certificate {
+            grid-area: certificate;
+            overflow: hidden;
+            @include respond-to('lg') {
+                padding: 0px;
+            }
+            img {
+                max-width: 130px;
+                @include respond-to('lg') {
+                    max-height: 130px;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        &--region {
+            grid-area: region;
+            
+            @include respond-to('lg') {
+                padding: 20px;
+            }
+
+            img {
+                max-width: 130px;
+                @include respond-to('lg') {
+                    max-width: 100%;
+                }
+            }
+        }
+
+    }
+}

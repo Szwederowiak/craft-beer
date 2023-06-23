@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #333;
+  min-height: 100vh;
+  font-family: "Poppins";
+  color: #ddd;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 0 0 1rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.container {
+  width: 360px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    width: 1180px;
+  }
+}
+
+.featured {
+  margin: 100px 0;
+  padding: 100px 0;
+}
+.featured__container {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logo logo" "image image" "description description" "certificate region";
+  grid-gap: 1px;
+  background: #ddd;
+}
+@media (min-width: 768px) {
+  .featured__container {
+    grid-template-areas: "logo logo" "image description" "image description" "certificate region";
+  }
+}
+@media (min-width: 1280px) {
+  .featured__container {
+    height: 700px;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 180px 180px 1fr;
+    grid-template-areas: "image logo region" "image certificate region" "image description description";
+  }
+}
+.featured__section {
+  background: #333;
+  box-shadow: 0 1px 0 0 #ddd, 0 -1px 0 0 #ddd;
+  display: grid;
+  place-items: center;
+  padding: 20px 0;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .featured__section {
+    padding: 20px;
+  }
+}
+.featured__section--logo {
+  grid-area: logo;
+  padding: 0;
+}
+.featured__section--logo img {
+  max-width: 200px;
+}
+@media (min-width: 1280px) {
+  .featured__section--logo img {
+    max-height: 130px;
+    max-width: 100%;
+  }
+}
+.featured__section--image {
+  grid-area: image;
+}
+@media (min-width: 1280px) {
+  .featured__section--image img {
+    height: 640px;
+  }
+}
+.featured__section--description {
+  grid-area: description;
+  display: block;
+}
+@media (min-width: 1280px) {
+  .featured__section--description {
+    padding: 30px 10px 30px 30px;
+  }
+}
+.featured__section--certificate {
+  grid-area: certificate;
+  overflow: hidden;
+}
+@media (min-width: 1280px) {
+  .featured__section--certificate {
+    padding: 0px;
+  }
+}
+.featured__section--certificate img {
+  max-width: 130px;
+}
+@media (min-width: 1280px) {
+  .featured__section--certificate img {
+    max-height: 130px;
+    max-width: 100%;
+  }
+}
+.featured__section--region {
+  grid-area: region;
+}
+@media (min-width: 1280px) {
+  .featured__section--region {
+    padding: 20px;
+  }
+}
+.featured__section--region img {
+  max-width: 130px;
+}
+@media (min-width: 1280px) {
+  .featured__section--region img {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
